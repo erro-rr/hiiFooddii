@@ -1,0 +1,72 @@
+.header{
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    margin:10px
+
+
+
+}
+.nav-items{   
+    padding: 0 10px 0;
+    width: auto;
+}
+
+.nav-items > ul{
+   display: flex;
+   list-style-type: none;
+}
+
+.nav-items>ul>li{
+    margin: 10px;
+    width: auto;
+    cursor: pointer;
+}
+
+.logo > img{
+    width: 70px;
+    padding-left: 10px;
+}
+.card{
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    border: solid black 1px;
+    width: 150px;
+    
+}
+
+.card > img{
+    width: 100%;
+    border-radius: 10px;
+}
+.card> h4{
+    display: flex;
+    list-style-type: none;
+}
+.card > span{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card > span > h4{
+    text-align: center;
+}
+.card > span > h4:first-child{
+    display: flex;
+    align-items: center;
+    background-color: rgb(19, 176, 1);
+    border-radius: 5px;
+    padding: 0 5px 0;
+    color: white;
+}
+
+.card > span > h4:first-child .fa-star{
+    font-size: small;
+    padding: 0 5px 3px 0;
+}
+
+.resturant-list{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
