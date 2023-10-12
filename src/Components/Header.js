@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Title= ()=> (
     <a href="/">
       <div className="logo">
@@ -22,9 +23,18 @@ const Header = ()=>{
          
          <div className="nav-items">
              <ul>
-                 <li> Home </li>
+                 <a href="/"> 
+                 <li>Home</li>
+                 </a>
+
+                 <Link to="/About">
                  <li> About </li>
+                 </Link>
+
+                 <Link to="/contact">
                  <li> Contact </li>
+                 </Link>
+                 
                  <li> Cart</li>
              </ul>
          </div>
@@ -39,5 +49,5 @@ const Header = ()=>{
 
  );
 }
-// Default exporter
+//Default exporter
 export default Header;

@@ -13,7 +13,7 @@ const ResturantCard = ({
             <h2>{name}</h2>
             <h4>{cuisines.join(" ")}</h4>
             <span>
-            <h4><i class="fa-solid fa-star"></i>{avgRating}</h4>
+            <h4><i className="fa-solid fa-star"></i>{avgRating}</h4>
               <h4>{locality}</h4>
               <h4>{costForTwo}</h4>
             </span> 
