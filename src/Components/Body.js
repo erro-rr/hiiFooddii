@@ -5,15 +5,8 @@ import { useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { swiggy_api_URL } from "../Contants";
 import { Link } from "react-router-dom";
-
-
-
-function filterData(searchText,restaurants) {
-  const filterData=restaurants.filter((resturant) =>
-    resturant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
-);
-  return filterData;
-}
+import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 
 const Body = ()=>{
@@ -29,16 +22,8 @@ const Body = ()=>{
 
     },[]);
 
-    // async function getResturant(){
-    //     const data= await fetch(swiggy_api_URL);
-    //     const json=await data.text();
-    //    // console.log(json);
-    //     setallRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    //     setfilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    // }
-
      // async function getRestaurant to fetch Swiggy API data
-  async function getRestaurants() {
+    async function getRestaurants() {
     // handle the error using try... catch
     try {
       const response = await fetch(swiggy_api_URL);
@@ -86,11 +71,17 @@ const Body = ()=>{
 
     if(!allRestaurants) return null;
 
+    const isOnline=useOnline();
+    if(!isOnline)
+      {
+        return <h1>Offiline ho bhai tm internet connect karo </h1>
+      }
+
     return( allRestaurants?.length===0 ?(
         <Shimmer/>
     ):(
         <>
-        <div className="search-container">
+        <div className="search-container p-3 bg-slate-100 my-2 shadow-m border-spacing-2">
             <input
             type="text"
             className="search-input"
@@ -100,7 +91,8 @@ const Body = ()=>{
                 setSearchText(e.target.value);
             }}
             />
-            <button className="Search-button" onClick={ ()=> {
+            <button className="Search-button p-2 m-2 bg-slate-300 hover:bg-slate-600  rounded-md" 
+            onClick={ ()=> {
                     // filter the data
                     const data = filterData(searchText, allRestaurants);
                     // update the state of restaurants list
@@ -109,10 +101,8 @@ const Body = ()=>{
             Search
             </button>
         </div>
-        
-
          {/* Two way binding where writing and reading at same time */}
-        <div className="resturant-list">
+        <div className="flex flex-wrap">
             {
                 filteredRestaurants?.map(restaurant =>(
                 <Link

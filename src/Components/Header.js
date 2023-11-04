@@ -1,43 +1,42 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
+import InstaMart from "./InstaMart";
+import Logo from "../assets/Logo/heyfood.jpg"
 const Title= ()=> (
     <a href="/">
-      <div className="logo">
-         <img 
-         alt="logo" 
-         src="https://cdn1.vectorstock.com/i/1000x1000/13/80/organic-food-restaurant-logo-vector-17131380.jpg"
-         >
-         </img>
-     </div>
-
+        <img className="h-28 p-2" src={Logo}/>
     </a>
 
 );
-
-
 const Header = ()=>{
     const[isloggedIn,setisloggedIn]=useState(true);
+    const isOnline=useOnline();
  return(
-     <div className="header"> 
+     <div className="flex justify-between bg-slate- shadow-lg text-slate-800"> 
          <Title />
-         
          <div className="nav-items">
-             <ul>
-                 <a href="/"> 
-                 <li>Home</li>
-                 </a>
+             <ul className="flex py-10">
+                 <Link to="/"> 
+                 <li className="px-2">Home</li>
+                 </Link>
 
                  <Link to="/About">
-                 <li> About </li>
+                 <li className="px-2" > About </li>
                  </Link>
 
                  <Link to="/contact">
-                 <li> Contact </li>
+                 <li className="px-2"> Contact </li>
+                 </Link>
+
+                 <Link to="/InstaMart">
+                 <li className="px-2"> Insta-Mart </li>
                  </Link>
                  
-                 <li> Cart</li>
+                 <li className="px-2"> Cart</li>
              </ul>
          </div>
+         <h1>{isOnline ? "✅" : "⛔"}</h1>
         {
             isloggedIn? (
             <button onClick={()=>setisloggedIn(false)}>Logout</button>
@@ -45,6 +44,7 @@ const Header = ()=>{
             <button onClick={()=>setisloggedIn(true)}>Login</button>
             )
         }
+         
      </div>
 
  );
