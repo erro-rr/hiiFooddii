@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erro-rr/Your_food.git"
+    "url": "git+https://github.com/erro-rr/heyFoodie.git"
   },
   "author": "Devendra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/erro-rr/Your_food/issues"
+    "url": "https://github.com/erro-rr/heyFoodie.git/issues"
   },
-  "homepage": "https://github.com/erro-rr/Your_food#readme",
+  "homepage": "https://github.com/erro-rr/heyFoodie.git#readme",
   "devDependencies": {
     "@babel/core": "^7.22.17",
     "parcel": "^2.9.3",
