@@ -4,7 +4,9 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: ['responsive', 'hover'],
+    },
   },
   plugins: [],
 }

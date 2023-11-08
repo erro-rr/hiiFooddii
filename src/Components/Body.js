@@ -81,7 +81,7 @@ const Body = ()=>{
         <Shimmer/>
     ):(
         <>
-        <div className="search-container p-3 bg-slate-100 my-2 shadow-m border-spacing-2">
+        <div className="search-container p-3 bg-slate-100 my-2 shadow-m border-spacing-2 ">
             <input
             type="text"
             className="search-input"

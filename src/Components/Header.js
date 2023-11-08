@@ -7,7 +7,6 @@ const Title= ()=> (
     <a href="/">
         <img className="h-28 p-2" src={Logo}/>
     </a>
-
 );
 const Header = ()=>{
     const[isloggedIn,setisloggedIn]=useState(true);
@@ -34,9 +33,14 @@ const Header = ()=>{
                  </Link>
                  
                  <li className="px-2"> Cart</li>
+                 <li className="px-2"> </li>
              </ul>
+             
          </div>
+         <div className="flex">
          <h1>{isOnline ? "✅" : "⛔"}</h1>
+         </div>
+       <div className="flex">
         {
             isloggedIn? (
             <button onClick={()=>setisloggedIn(false)}>Logout</button>
@@ -44,6 +48,7 @@ const Header = ()=>{
             <button onClick={()=>setisloggedIn(true)}>Login</button>
             )
         }
+       </div>
          
      </div>
 
