@@ -30,7 +30,7 @@ class About extends React.Component{
         // console.log("Parent-Render");
         return(
             <div>
-                 <h4>hello ji 👋</h4>
+                 <h4>hello ji  👋</h4>
                  {/* <Outlet/> */}
                  {/* <ProfileClass/> */}
                  {/* <ProfileClass names={"Dev"}/> */}
