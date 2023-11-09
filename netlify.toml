@@ -1,6 +1,6 @@
 [[redirects]]
-from = "/*"
-to = "https://devhiifooddii.netlify.app/:splat"
+from = "/api/*"
+to = "https://www.swiggy.com/:splat"
 status = 200
 force = true
 
