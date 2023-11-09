@@ -1,12 +1,11 @@
 [[redirects]]
-  from = "/*>"
-  to = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.689214&lng=77.2239895&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING" 
-   # Replace with the actual Swiggy API URL
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+from = "/api/*"
+to = "https://www.swiggy.com/:splat"
+status = 200
+force = true
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
+
+[[redirects]]
+from ='/*'
+to ='/index.html'
+status = 200
