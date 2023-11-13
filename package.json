@@ -4,7 +4,7 @@
   "description": "lecture4",
   "scripts": {
     "start": "parcel index.html",
-     "build": "parcel build index.html --dist-dir dist ",
+    "build": "parcel build index.html --dist-dir dist ",
     "test": "jest"
   },
   "repository": {
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "cors": "^2.8.5",
     "cosmiconfig": "^8.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
