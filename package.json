@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/erro-rr/heyFoodie.git#readme",
   "devDependencies": {
-    "@babel/core": "^7.22.17",
+    "@babel/core": "^7.23.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "parcel": "^2.9.3",
     "postcss": "^8.4.31",
     "process": "^0.11.10",

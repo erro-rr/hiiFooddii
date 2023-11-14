@@ -70,9 +70,7 @@ const RestaurantMenu = () => {
           <p>{restaurant?.cuisines?.join(", ")}</p>
             <i className="fa-solid fa-star"></i>
             <span>{restaurant?.avgRating}</span>
-            <div>|</div>
             <div>{restaurant?.sla?.slaString}</div>
-            <div>|</div>
             <div>{restaurant?.costForTwoMessage}</div>
           </div>
       </div>
