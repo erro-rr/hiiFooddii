@@ -1,4 +1,4 @@
-import React, { lazy ,Suspense} from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDom from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
@@ -66,7 +66,7 @@ const appRouter=createBrowserRouter([
             },
             {
                 path: "/InstaMart",
-                element:(<Suspense fa>
+                element:(<Suspense >
                     <InstaMart/>
                 </Suspense>),   
             },

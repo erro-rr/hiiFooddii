@@ -12,16 +12,16 @@ const Header = ()=>{
     const[isloggedIn,setisloggedIn]=useState(true);
     const isOnline=useOnline();
  return(
-     <div className="flex justify-between bg-slate- shadow-lg text-slate-800"> 
+     <div className="flex justify-between bg-slate- shadow-lg text-slate-800 p-5 "> 
          <Title />
          <div className="nav-items">
              <ul className="flex py-10">
                  <Link to="/"> 
-                 <li className="px-2">Home</li>
+                 <li className="px-2 hover:text-orange-600">Home</li>
                  </Link>
 
                  <Link to="/About">
-                 <li className="px-2" > About </li>
+                 <li className="px-2 " > About </li>
                  </Link>
 
                  <Link to="/contact">
@@ -29,7 +29,7 @@ const Header = ()=>{
                  </Link>
 
                  <Link to="/InstaMart">
-                 <li className="px-2"> Insta-Mart </li>
+                 <li className="px-2 "> Insta-Mart </li>
                  </Link>
                  
                  <li className="px-2"> Cart</li>
@@ -37,17 +37,19 @@ const Header = ()=>{
              </ul>
              
          </div>
-         <div className="flex">
-         <h1>{isOnline ? "✅" : "⛔"}</h1>
-         </div>
-       <div className="flex">
+       <div className="flex ">
+        <ul className="flex py-10 px-10 justify-between">
+            <li> <h1>{isOnline ? "🟢" : "🔴"}</h1> </li>
+            <li>    
         {
-            isloggedIn? (
+          isloggedIn? (
             <button onClick={()=>setisloggedIn(false)}>Logout</button>
             ):(
             <button onClick={()=>setisloggedIn(true)}>Login</button>
             )
         }
+        </li>
+        </ul>
        </div>
          
      </div>
