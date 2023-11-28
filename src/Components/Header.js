@@ -17,30 +17,29 @@ const Header = ()=>{
          <div className="nav-items">
              <ul className="flex py-10">
                  <Link to="/"> 
-                 <li className="px-2 hover:text-orange-600">Home</li>
+                 <li className="px-2 hover:text-orange-500">Home</li>
                  </Link>
 
                  <Link to="/About">
-                 <li className="px-2 " > About </li>
+                 <li className="px-2 hover:text-orange-500" > About </li>
                  </Link>
 
                  <Link to="/contact">
-                 <li className="px-2"> Contact </li>
+                 <li className="px-2 hover:text-orange-500"> Contact </li>
                  </Link>
 
                  <Link to="/InstaMart">
-                 <li className="px-2 "> Insta-Mart </li>
+                 <li className="px-2 hover:text-orange-500 "> Insta-Mart </li>
                  </Link>
                  
-                 <li className="px-2"> Cart</li>
-                 <li className="px-2"> </li>
+                 <li className="px-2 hover:text-orange-500"> Cart</li>
              </ul>
              
          </div>
        <div className="flex ">
         <ul className="flex py-10 px-10 justify-between">
             <li> <h1>{isOnline ? "🟢" : "🔴"}</h1> </li>
-            <li>    
+            <li className="hover:text-orange-500">    
         {
           isloggedIn? (
             <button onClick={()=>setisloggedIn(false)}>Logout</button>

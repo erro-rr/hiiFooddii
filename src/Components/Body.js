@@ -91,7 +91,7 @@ const Body = ()=>{
                 setSearchText(e.target.value);
             }}
             />
-            <button className="Search-button p-2 m-2 bg-slate-300 hover:bg-slate-600  rounded-md" 
+            <button className="Search-button p-2 m-2 bg-slate-300 hover:bg-orange-500  rounded-md" 
             onClick={ ()=> {
                     // filter the data
                     const data = filterData(searchText, allRestaurants);
