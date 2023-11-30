@@ -36,7 +36,7 @@ const Header = ()=>{
              </ul>
              
          </div>
-       <div className="flex ">
+       <div className=" ">
         <ul className="flex py-10 px-10 justify-between">
             <li> <h1>{isOnline ? "🟢" : "🔴"}</h1> </li>
             <li className="hover:text-orange-500">    
